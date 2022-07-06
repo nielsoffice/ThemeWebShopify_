@@ -1,0 +1,38 @@
+
+// DL the them from Shopify
+
+Git init
+Git add
+Git commit -m "Message [ Enter ]
+
+// Create repo in github
+// Upload the Shopify Theme on Github
+// Connect Github to Shopify on BackEnd System/Store
+
+// DO edit from code editor/IDE
+// Run on terminal
+Git push origin master
+
+// Create Github Branch
+// named it as staging
+
+// AFter submit to live staging 
+// next is run git merge
+
+// Run on terminal
+Git merge staging
+
+------------------------------
+SHOPIFY CLI
+
+// INSTALL RUBYWITHDevKit : https://rubyinstaller.org/downloads/
+// Install Shopify on local computer
+gem install shopify-cli : https://shopify.dev/themes/tools/cli/installation
+
+// Check version
+shopify version
+
+
+shopify login [--store <DOMAIN>] : https://shopify.dev/themes/tools/cli/core-commands
+
+

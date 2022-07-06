@@ -1,0 +1,66 @@
+1. Tags and filters
+
+2. Objects (Store data)
+
+3. Schemas (Theme Data)
+
+4. Limitation & Scope
+
+
+
+Tags: Are programming logic that tells tempalte what to do.
+ex. {% ... %}
+ 
+Types of tags: 
+*Control flow: create a condition [ if, unless, else/elsif, case/when, and/or ]
+USAGE: 
+{% if %}
+...
+{% endif %}
+--------
+{% if %}
+{% else %}
+{% endif %}
+--------
+{% if var >  and var < 10 %} 
+...
+{% endif %}
+
+*Iteration
+{% for product in collection.products %}
+<h1>{{  product.title }}</h1>
+{% endfor %}
+--------
+{% for product in collection.products %}
+<h1>{{  product.title }}</h1>
+{% else %}
+<p> The collection is empty! </p>
+{% endfor %}
+*Theme
+
+*Variable
+{% assign var_name = 'Product name' %}
+{{ var_name }}
+
+
+LIQUID SHOPIFY
+- Object
+  Json data that you wish to rendered on the pages
+- Tags
+  A conditional logic statement that help to specify rendered data output to pages 
+- Filter
+  Is a Shopify function that output data according to desire output
+
+
+
+<!-- {% for product in collections.frontpage.products limit:4 %}
+  <div>
+    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+    {{ product.price | money }}
+    {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+    <a href="{{ product.url | within: collection }}">
+      <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+    </a>
+  </div>
+{% endfor %}
+ -->

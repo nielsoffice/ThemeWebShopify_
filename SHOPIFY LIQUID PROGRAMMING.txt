@@ -1,0 +1,264 @@
+Reference: 
+https://shopify.dev/api/liquid/
+
+Object:
+Also known as variable that wrap into curly braces {{ ... }}
+output pieces of data from shopify store.
+ex.: {{ shop.name }} // rendering shop store
+// references: https://shopify.dev/api/liquid/
+
+Tags:
+Tells template what to do?. conditional statement {% ... %}
+*Control flow
+ if/unless/else/elsif/case/when/and/or
+
+USAGE: 
+{% if %}
+...
+{% endif %}
+--------
+{% if %}
+{% else %}
+{% endif %}
+--------
+{% if var >  and var < 10 %} 
+...
+{% endif %}
+
+*Iteration
+Loop data in arrays
+
+{% for product in collection.products %}
+<h1>{{  product.title }}</h1>
+{% endfor %}
+--------
+{% for product in collection.products %}
+<h1>{{  product.title }}</h1>
+{% else %}
+<p> The collection is empty! </p>
+{% endfor %}
+
+*Theme Tag
+Template specific HTML codes
+Dividing array into multiple page
+To make Shopify themes use custom layout/Snippets
+
+{% form "product", product %}
+...
+{% endform %}
+----------
+{% section 'header' %}
+----------
+{% paginate collection.products by 5 %}
+{% for product in collection.products %}
+ ... <!-- show product details goes here -->
+{% endfor %}
+{% endpaginate %}
+----------
+{% layout 'full-width' %}
+
+*Varaible Tag
+The tag that you can create liquid variable
+{% assign var_name = 'Product name' %}
+{{ var_name }}
+----------
+{% capture %}
+...
+{% endcapture %}
+
+LIQUID SHOPIFY
+- Object
+  Json data that you wish to rendered on the pages
+- Tags
+  A conditional logic statement that help to specify rendered data output to pages 
+- Filter
+  Is a Shopify function that output data according to desire output
+{{ product.title | uppercase }}
+// Output: Product title will be uppercase
+// That is how filter works
+
+----------------------------
+CHAPTER OBJECTS
+ - Object is like a variable or storage of information
+ You can put water or anything in short object can hold datas
+
+*Attribute: porperty of an object that hold unchangeable value
+the value will be taken from the server of shopify which was made 
+from shopify store.
+
+Ex.: A product object can have attr such ID, TITLE, DESCRIPTION
+{{ product.id }}
+
+NOTE: Url such shop.com/product/product-name
+// [ product/product-name ]
+// This is called : URL Handle
+
+types of Object [ Regular | Global ].
+NOTE: Product Object only work on product page/Template
+{{ product.title }} // Regular
+
+- Accessing Product using Global Object
+{{ all_products }} is a Global object that contains all of 
+products from you shopify store. Need to use "handle" to
+specify which product are you going to display
+{{ all_products['product-name'].title }} 
+// it will render on home page becuase this is global not 
+only on product page/template
+
+CONTENT OBJECT
+ - Is a liquid object that can be use to ouput
+the content of templates or section files as well as
+the script and stylesheets loaded by shopify and shopify apps
+
+THREE CONTENT ONBJECTS
+{{ content_for_header }}
+{{ content_for_index }}
+{{ content_for_layout }}
+
+{{ content_for_header }}
+// Is a content object that is required in the theme.liquid
+// These of object must be place inside the HTML <head> tag
+
+{{ content_for_index }}
+// is the content object that will generate the section 
+added through the theme editor.
+// without this you cannot add section editor on theme or totally empty section
+not able to perform
+// This object is only available for index.liquid
+
+ 
+{{ content_for_layout }}
+// Is ac content object that dynamically loads content
+generate by template file such as index.liquid/theme.liquid or 
+product.liquid
+ 
+--------------
+
+LIQUID TAGS
+ - Liquid tags are the programming logic that tells templates what to do.
+* Control Flow
+* Deprecated tags
+* Iteration tags
+* Theme tags
+* Variable tags
+
+- ITERATION TAG
+ - FOR
+ - CYCLETAG
+ - TABLEROW
+
+- THEME TAG
+ - Comment
+ - echo 
+ - form
+ - layout
+ - liquid
+ - paginate
+ - raw
+ - render
+ - section
+ - style
+ 
+ RENDER Tag allow to render the file from "snippet" folder
+ {% render 'filename' %}
+ // Passing a variable 
+ {% render 'filename', variable_name: value %}
+-----
+ // Template folder OUTPUT
+ {% for product in products %}
+   
+  {% render 'productfile', product: product %}
+ 	
+ {% endfor %}
+-----
+  // Snippet folder  [ filename : productfile.liquid ]
+  {{ product.title }}
+
+===== example 2
+
+ // Template folder OUTPUT
+ {% for product in products %}
+   
+  {% render 'productfile', var_name: product %}
+ 	
+ {% endfor %}
+-----
+  // Snippet folder [ filename : productfile.liquid ]
+  {{ var_name.title }}
+ 
+  // we have to pass the variable in render theme tag and 
+replace from to the "snippet" folder as example above
+ // var_name instead of product which is from for loop
+ //  {% for product in products %}
+
+ SECTION Tag allow to render the file from "Section" folder
+ // Is similar approach to Snippet : https://shopify.dev/api/liquid/tags#section
+ 
+ STYLE : we are able to use object from custom field that we created from section 
+ : https://shopify.dev/api/liquid/tags#style\
+ {% style %}
+  .h1 {
+    color: {{ settings.colors_accent_1 }};
+  }
+ {% endstyle %}
+
+ 
+  VARIABLE SHOPIFY
+  - ASSING
+  - CAPTURE
+  - INCREMENT
+  - DECREMENT
+
+  - ASSING {% assign var_name = STRING, NUMBER, BOOL, ARRAYS %}
+  - CAPTURE {% capture var_name %} Value string {% endcapture %}
+  - INCREMENT {% increment counter %}
+  - DECREMENT {% decrement counter %}
+  
+  WORKING WITH ASSETS
+  
+  {{ 'filename.extension' | assert_url }}
+  ex. 
+   <link href=" {{ 'filename.extension' | assert_url }}" rel="stylesheet">
+   <img src="{{ 'filename.extension' | assert_url }}" />
+  
+
+   WORKING WITH PAGINATION
+   {% pagination blog.articles by 5 %}
+     {% for article in pagination blog.articles %}
+	
+	{{ article.title }}      
+
+     {% endfor %}
+     {{ paginate | default_pagination }}
+   {% endpagination %}
+ 
+   {% pagination blog.articles by 5 %}
+     {% for article in pagination blog.articles %}
+	
+	{{ article.title }}      
+
+     {% endfor %}
+     
+=========================
+
+  {% if paginate.pages > 1 %}
+     <a href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
+   
+       {% for page in paginate.parts %}
+   	 <a href="{{ page.url }}">{{ page.title }}</a>
+       {% endfor %}
+
+     <a href="{{ paginate.next.url }}">{{ paginate.next.title }}</a>
+    {% endif %}
+
+   {% endpagination %}
+ 
+
+
+ 
+
+
+
+
+
+

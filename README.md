@@ -126,7 +126,7 @@ References Shopify Development
 
  // rendering block | repeater
 
- {% for block in setcion.blocks %}
+ {% for block in section.blocks %}
 
   {{ block.settings.id-name}}
   

@@ -1,4 +1,4 @@
-# devShopify_
+# Theme Website Development Shopify
 References Shopify Development 
 
 <a href="https://github.com/nielsofficeofficial/shopify-sections"> Section References </a> <br />

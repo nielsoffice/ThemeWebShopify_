@@ -5,6 +5,15 @@ References Shopify Development
 <a href="https://github.com/nielsofficeofficial/shopify-tutorial"> Tutorial References </a> <br />
 <a href="https://github.com/nielsofficeofficial/Celeste"> Liquid References </a> <br />
 
+<h4> Reference Development </h4>
+<a href="https://shopify.github.io/liquid/"> Liquid References Dev </a> <br />
+<a href="https://www.shopify.com/partners/shopify-cheat-sheet/"> Partners Cheat Sheet Dev </a> <br />
+<a href="https://shopify.dev/api/liquid"> Liquid API Dev </a> <br />
+<a href="https://shopify.dev/api/liquid/basics"> Liquid API Basic Dev </a> <br />
+<a href="https://shopify.dev/api/liquid/tags"> Liquid API Tags Dev </a> <br />
+<a href="https://shopify.dev/api/liquid/filters"> Liquid API FIlters Dev </a> <br />
+<a href="https://shopify.dev/api/liquid/objects"> Liquid API Objects Dev </a> <br />
+
 <h4> Theme Development </h4>
 
 ```Liquid

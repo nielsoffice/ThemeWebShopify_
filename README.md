@@ -1,6 +1,10 @@
 # devShopify_
 References Shopify Development 
 
+<a href="https://github.com/nielsofficeofficial/shopify-sections"> Section References </a> <br />
+<a href="https://github.com/nielsofficeofficial/shopify-tutorial"> Tutorial References </a> <br />
+<a href="https://github.com/nielsofficeofficial/Celeste"> Liquid References </a> <br />
+
 <h4> Theme Development </h4>
 
 ```Liquid

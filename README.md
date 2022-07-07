@@ -38,7 +38,7 @@ References Shopify Development
   "templates" : ["index", "page","pageName"] // use this line of you want this avaialble only on that particular pages
   "presets" : [{
        "name" : "Custom Section Display Page Name",
-       "Category" : "Reference:
+       "Category" : "Reference"
    }]
  }
 {% endschema %}
@@ -75,7 +75,7 @@ References Shopify Development
   "templates" : ["index", "page","pageName"] // use this line of you want this avaialble only on that particular pages
   "presets" : [{
        "name" : "Custom Section Display Page Name",
-       "Category" : "Reference:
+       "Category" : "Reference"
    }]
  }
 {% endschema %}

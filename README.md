@@ -9,7 +9,7 @@ Addition References Shopify Development
 <br />Theme structure diagram: - https://github.com/christopherdodd/Skillshare/blob/master/Shopify-Theme-Structure-Diagram-2019.jpg
 
 Layout: theme.liquid [ Head Section this is for assets like JS/CSS/Fonts Installation ]   
-Template: Theme file hierarchy [ https://shopify.dev/api/liquid/objects#template ||  ]
+Template: Theme file hierarchy [ https://shopify.dev/api/liquid/objects#template ]
  - 404.liquid
  - article.liquid
  - blog.liquid

@@ -23,7 +23,7 @@ Addition References Shopify Development
  - customers/register.liquid
  - customers/reset_password.liquid
  - gift_card.liquid
- - index.liquid
+ - index.liquid [ {{ content_for_index }} ] this will allowed section drag and drop reorder or sorting dynamic
  - list-collection.liquid
  - page.contact.liquid //  This is how create a specific custom page ex. [ page.pageName.liquid ]
  - page.liquid

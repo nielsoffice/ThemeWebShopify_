@@ -8,8 +8,8 @@ Addition References Shopify Development
 <br />Liquid Objects: - https://shopify.dev/api/liquid/objects
 <br />Theme structure diagram: - https://github.com/christopherdodd/Skillshare/blob/master/Shopify-Theme-Structure-Diagram-2019.jpg
 
-Layout: theme.liquid [ Head Section this is for assets like JS/CSS/Fonts Installation ]   
-Template: Theme file hierarchy [ https://shopify.dev/api/liquid/objects#template ]
+<i>Layout:</i> theme.liquid [ Head Section this is for assets like JS/CSS/Fonts Installation ]   
+<i>Template:</i> Theme file hierarchy [ https://shopify.dev/api/liquid/objects#template ]
  - 404.liquid
  - article.liquid
  - blog.liquid
@@ -30,8 +30,8 @@ Template: Theme file hierarchy [ https://shopify.dev/api/liquid/objects#template
  - password.liquid
  - product.liquid
  - search.liquid
-Section: Custom layout UI specific for page SECTION ex. [ Header is a section / footer is a section ]
-Snippet: Reusable codes can be use using "include" key word ex. [ {% include 'snippet-name' %} ]
+<br /><i>Section:</i> Custom layout UI specific for page SECTION ex. [ Header is a section / footer is a section ]
+<br /><i>Snippet:</i> Reusable codes can be use using "include" key word ex. [ {% include 'snippet-name' %} ]
 
 References Shopify Development 
 

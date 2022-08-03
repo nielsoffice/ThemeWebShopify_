@@ -6,6 +6,32 @@ Addition References Shopify Development
 <br />Product CSV - https://github.com/shopifypartners/product-csvs
 <br />Theme architecture - https://shopify.dev/themes/architecture
 <br />Liquid Objects: - https://shopify.dev/api/liquid/objects
+<br />Theme structure diagram: - https://github.com/christopherdodd/Skillshare/blob/master/Shopify-Theme-Structure-Diagram-2019.jpg
+
+Layout: theme.liquid [ Head Section this is for assets like JS/CSS/Fonts Installation ]   
+Template: Theme file hierarchy [ https://shopify.dev/api/liquid/objects#template ||  ]
+ - 404.liquid
+ - article.liquid
+ - blog.liquid
+ - cart.liquid
+ - collection.liquid
+ - customers/account.liquid
+ - customers/active_account.liquid
+ - customers/addresses.liquid
+ - customers/login.liquid
+ - customers/order.liquid
+ - customers/register.liquid
+ - customers/reset_password.liquid
+ - gift_card.liquid
+ - index.liquid
+ - list-collection.liquid
+ - page.contact.liquid //  This is how create a specific custom page ex. [ page.pageName.liquid ]
+ - page.liquid
+ - password.liquid
+ - product.liquid
+ - search.liquid
+Section:
+Snippet: 
 
 References Shopify Development 
 

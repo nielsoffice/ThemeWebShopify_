@@ -1,4 +1,12 @@
 # Theme Website Development Shopify
+
+Addition References Shopify Development 
+<br />Shopify Partners - https://www.shopify.com/partners 
+<br />Theme kit:- https://shopify.dev/themes/tools/theme-kit/getting-started
+<br />Product CSV - https://github.com/shopifypartners/product-csvs
+<br />Theme architecture - https://shopify.dev/themes/architecture
+<br />Liquid Objects: - https://shopify.dev/api/liquid/objects
+
 References Shopify Development 
 
 <a href="https://github.com/nielsofficeofficial/shopify-sections"> Section References </a> <br />

@@ -254,10 +254,8 @@ replace from to the "snippet" folder as example above
    {% endpagination %}
  
 
-
- 
-
-
+========================= BONUS [ 08042022 ]
+YT: https://www.youtube.com/watch?v=zCDo-l5DJSo 
 
 
 

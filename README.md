@@ -30,8 +30,8 @@ Template: Theme file hierarchy [ https://shopify.dev/api/liquid/objects#template
  - password.liquid
  - product.liquid
  - search.liquid
-Section:
-Snippet: 
+Section: Custom layout UI specific for page SECTION ex. [ Header is a section / footer is a section ]
+Snippet: Reusable codes can be use using "include" key word ex. [ {% include 'snippet-name' %} ]
 
 References Shopify Development 
 

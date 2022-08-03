@@ -32,7 +32,8 @@ Addition References Shopify Development
  - search.liquid
 <br /><i>Section:</i> Custom layout UI specific for page SECTION ex. [ Header is a section / footer is a section ]
 <br /><i>Snippet:</i> Reusable codes can be use using "include" key word ex. [ {% include 'snippet-name' %} ]
-<br /> TY: https://youtu.be/9t6I-YY4o30?t=653
+<br /> Bonus: Calling or execute section to a page or Template folder: {% section 'section-name' %} specific for header and footer file
+<br /> YT: https://youtu.be/9t6I-YY4o30?t=653
 
 References Shopify Development 
 
